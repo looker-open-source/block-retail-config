@@ -6,7 +6,7 @@ explore: transactions_config {
 
   join: currency_conversion {
     relationship: many_to_one
-    sql: ${transactions.local_currency_code} = ${currency_conversion.currency}
-      AND ${transactions.transaction_date} BETWEEN ${currency_conversion.valid_from_date} AND ${currency_conversion.valid_to_date};;
+    sql_on: ${transactions.local_currency_code} = ${currency_conversion.currency}
+      AND ${transactions.transaction_date} = ${currency_conversion.currency_date};;
   }
 }
