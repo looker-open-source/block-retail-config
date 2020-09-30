@@ -41,4 +41,6 @@ view: transactions_config {
 
   # Add your custom fields here:
 
+  dimension: local_currency_code {}
+
 }
