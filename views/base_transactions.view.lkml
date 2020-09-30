@@ -23,6 +23,7 @@ view: transactions_config {
   }
 
   dimension: customer_id {
+    hidden: no
     sql: ${TABLE}.Client_id ;;
   }
 
@@ -38,6 +39,6 @@ view: transactions_config {
     sql: ${TABLE}.transaction_timestamp ;;
   }
 
-  # Add you custom fields here:
+  # Add your custom fields here:
 
 }
