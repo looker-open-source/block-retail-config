@@ -7,6 +7,11 @@ constant: SCHEMA_NAME {
   export: override_required
 }
 
+constant: WEATHER_SCHEMA_NAME {
+  value: "bigquery-public-data.ghcn_d"
+  export: override_required
+}
+
 constant: TRANSACTIONS_TABLE_NAME {
   value: "transactions"
   export: override_required
