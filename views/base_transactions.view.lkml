@@ -6,6 +6,7 @@ view: transactions_config {
   derived_table: {
     datagroup_trigger: forever
     partition_keys: ["transaction_timestamp"]
+    cluster_keys: ["CM_Store_ID"]
     sql: SELECT Origin,Time_ID,Hour_ID,CM_Store_ID,CM_Country_ID,Client_id,Logistic_ID,Ticket_ID,Local_Currency_Code,Till_Number,Transaction_Number,Ticket_Client,Disc_Reason_Name,Gift_Card
     ,FARM_FINGERPRINT(CONCAT(Time_ID,Hour_ID,IFNULL(CAST(Ticket_ID AS STRING),''),IFNULL(Transaction_Number,''),IFNULL(CAST(CM_Store_ID AS STRING),''),IFNULL(Till_Number,''))) AS transaction_id
     ,PARSE_TIMESTAMP('%Y%m%d %H%M',CONCAT(time_id,' ',LPAD(CAST(hour_id AS STRING),4,'0'))) AS transaction_timestamp
