@@ -17,4 +17,6 @@ view: stores_config {
   dimension: name {
     sql: ${TABLE}.Store_Desc ;;
   }
+
+  # Add your custom fields here:
 }
