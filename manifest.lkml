@@ -37,12 +37,12 @@ constant: STORES_TABLE_NAME {
   export: override_required
 }
 
-constant: COMPANY_LOGO {
-  value: "https://i.imgur.com/DwmnjA2.png"
+constant: MAIN_CURRENCY_SYMBOL {
+  value: "$"
   export: override_required
 }
 
-constant: MAIN_CURRENCY_SYMBOL {
-  value: "$"
+constant: IMAGE_SEARCH_URL {
+  value: "https://us-central1-looker-private-demo.cloudfunctions.net/imageSearch?q="
   export: override_required
 }
