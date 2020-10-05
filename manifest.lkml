@@ -36,3 +36,13 @@ constant: STORES_TABLE_NAME {
   value: "dim_stores"
   export: override_required
 }
+
+constant: COMPANY_LOGO {
+  value: "https://i.imgur.com/DwmnjA2.png"
+  export: override_required
+}
+
+constant: MAIN_CURRENCY_SYMBOL {
+  value: "$"
+  export: override_required
+}
