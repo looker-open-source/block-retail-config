@@ -3,7 +3,7 @@ view: stores_config {
   extension: required
 
   dimension: id {
-    sql: ${TABLE}.CM_STORE_ID ;;
+    sql: ${TABLE}.id ;;
   }
 
   dimension: latitude {
@@ -15,7 +15,7 @@ view: stores_config {
   }
 
   dimension: name {
-    sql: ${TABLE}.Store_Desc ;;
+    sql: ${TABLE}.name ;;
   }
 
   # Add your custom fields here:

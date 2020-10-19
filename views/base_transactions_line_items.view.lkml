@@ -3,36 +3,23 @@ view: transactions__line_items_config {
   extension: required
 
   dimension: product_id {
-    sql: ${TABLE}.CM_Material_ID ;;
+    sql: ${TABLE}.product_id ;;
   }
 
   dimension: sale_price {
-    sql: ${TABLE}.Sales_VAT_in_LC / ${selected_exchange_rate} ;;
+    sql: ${TABLE}.sale_price ;;
   }
 
   dimension: quantity {
-    sql: ${TABLE}.quantity ;;
+    # sql: ${TABLE}.quantity ;;
+    sql: 1 ;;
   }
 
   dimension: cost_of_goods_sold {
-    sql: ${TABLE}.COGS_in_LC / ${selected_exchange_rate} ;;
+    # sql: ${TABLE}.cost ;;
+    sql: ${TABLE}.gross_margin - ${sale_price} ;;
   }
 
   # Add your custom fields here:
 
-  dimension: currency_rate {
-    type: number
-    sql: ${TABLE}.currency_rate ;;
-  }
-
-  parameter: local_currency {
-    type: yesno
-    default_value: "no"
-  }
-
-  dimension: selected_exchange_rate {
-    hidden: no
-    type: number
-    sql: {% if local_currency._parameter_value == 'true' %} 1 {% else %} ${currency_rate} {% endif %}   ;;
-  }
 }

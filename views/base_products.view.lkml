@@ -3,19 +3,19 @@ view: products_config {
   extension: required
 
   dimension: id {
-    sql: ${TABLE}.Material_ID ;;
+    sql: ${TABLE}.id ;;
   }
 
   dimension: brand {
-    sql: ${TABLE}.Brand_Description ;;
+    sql: ${TABLE}.brand ;;
   }
 
   dimension: category {
-    sql: ${TABLE}.Department_Code ;;
+    sql: ${TABLE}.category ;;
   }
 
   dimension: name {
-    sql: ${TABLE}.Material_Description ;;
+    sql: ${TABLE}.name ;;
   }
 
   # Add your custom fields here:

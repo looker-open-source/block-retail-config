@@ -3,7 +3,7 @@ project_name: "retail-block-config"
 ################ Constants ################
 
 constant: SCHEMA_NAME {
-  value: "looker-private-demo.retail"
+  value: "looker-demo.retail"
   export: override_required
 }
 
@@ -43,6 +43,6 @@ constant: MAIN_CURRENCY_SYMBOL {
 }
 
 constant: IMAGE_SEARCH_URL {
-  value: "https://us-central1-looker-private-demo.cloudfunctions.net/imageSearch?q="
+  value: "https://us-central1-looker-demo.cloudfunctions.net/imageSearch?q="
   export: override_required
 }
