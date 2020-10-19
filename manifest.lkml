@@ -43,6 +43,6 @@ constant: MAIN_CURRENCY_SYMBOL {
 }
 
 constant: IMAGE_SEARCH_URL {
-  value: "https://us-central1-looker-demo.cloudfunctions.net/imageSearch?q="
+  value: "https://us-central1-looker-private-demo.cloudfunctions.net/imageSearch?q="
   export: override_required
 }
