@@ -11,13 +11,11 @@ view: transactions__line_items_config {
   }
 
   dimension: quantity {
-    # sql: ${TABLE}.quantity ;;
-    sql: 1 ;;
+    sql: ${TABLE}.quantity ;;
   }
 
   dimension: cost_of_goods_sold {
-    # sql: ${TABLE}.cost ;;
-    sql: ${TABLE}.gross_margin - ${sale_price} ;;
+    sql: ${TABLE}.cost ;;
   }
 
   # Add your custom fields here:
