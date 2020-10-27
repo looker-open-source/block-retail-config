@@ -46,3 +46,8 @@ constant: IMAGE_SEARCH_URL {
   value: "https://us-central1-looker-private-demo.cloudfunctions.net/imageSearch?q="
   export: override_required
 }
+
+constant: GOOGLE_MAPS_API_KEY {
+  value: "xxxxxxxx"
+  export: override_required
+}
